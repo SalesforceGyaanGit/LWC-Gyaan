@@ -1,0 +1,33 @@
+<template>
+<div class="slds-card">
+    <div class="slds-p-around_medium slds-align_absolute-center" style="height:1.5rem">Calculator</div>
+    <div class="slds-p-around_medium slds-align_absolute-center" style="height:1.5rem">Salesforce Gyaan</div>
+    <div class="slds-p-around_medium slds-align_absolute-center" style="height:1.5rem">
+        Welcome Mr.Prashant Sontakke 
+    </div>
+    <br/>
+    <div class="slds-card slds-align_absolute-center">
+        <lightning-button variant="brand" label="Show Calculator" onclick={showCalci} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Hide Caluclator" onclick={hideCalci} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    <br/>
+    <template lwc:if={showCalculator}>
+        <div class="slds-card slds-p-around_medium">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Enter First Digit" name="D1" onchange={getDigit1} placeholder="Enter First Digit here .."></lightning-input>
+                <lightning-input type="text" label="Enter Second Digit" name="D2" onchange={getDigit2} placeholder="Enter Second Digit here .."></lightning-input>
+            </div>
+            <div>
+                <lightning-button variant="brand" label="Add" onclick={doAddition} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Sub" onclick={doSubstraction} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Mul" onclick={doMultiplication} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Div" onclick={doDivision} class="slds-m-left_x-small"></lightning-button>
+            </div>
+            <div>
+                The Result of Digit 1 and Digit 2 is : {Total}
+            </div>
+        </div>
+    </template>
+</div>
+
+</template>

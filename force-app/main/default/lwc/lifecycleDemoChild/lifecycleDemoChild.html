@@ -1,0 +1,24 @@
+<template>
+    <div style="border: 2px dashed #0070d2; padding: 1rem; margin-top: 1rem;">
+        <h2 class="heading">👶 Child Component Active</h2>
+
+        <ul>
+            <template for:each={status} for:item="step">
+                <li key={step}>{step}</li>
+            </template>
+        </ul>
+
+        <p><strong>⏰ Time from connectedCallback:</strong> {timeNow}</p>
+        <p><strong>🎨 Heading Color:</strong> {headingColor}</p>
+
+        <button onclick={throwError}>💣 Throw Error</button>
+
+        <template if:true={showFailingChild}>
+            <c-child-that-fails></c-child-that-fails>
+        </template>
+
+        <template if:true={errorMsg}>
+            <p style="color: red; font-weight: bold;">{errorMsg}</p>
+        </template>
+    </div>
+</template>

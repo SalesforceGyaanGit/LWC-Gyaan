@@ -1,0 +1,15 @@
+<template>
+    <div style="border: 2px solid gray; padding: 1rem;">
+        <h1>👨‍👦 Lifecycle Demo Parent</h1>
+
+        <button onclick={toggleChild}>{toggleLabel}</button>
+
+        <template if:true={errorMessage}>
+            <p style="color: red; font-weight: bold;">{errorMessage}</p>
+        </template>
+
+        <template if:true={showChild}>
+            <c-lifecycle-demo-child></c-lifecycle-demo-child>
+        </template>
+    </div>
+</template>

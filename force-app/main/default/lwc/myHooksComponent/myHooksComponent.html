@@ -1,0 +1,13 @@
+<template>
+   <div> Hello Salesforce Gyaan </div>    
+   <!-- <c-my-Hooks-Child-Comp></c-my-Hooks-Child-Comp> -->
+
+   <template if:true={error}>   <!-- Error = true-->
+      <b> Error Found :</b>
+   </template>
+
+   <template if:false={error}>
+      <b> We could not found any errors</b>
+   </template>
+   
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-p-around_xx-small slds-align_absolute-center" style="height:5rem">
+            <div class="slds-p-around_xx-small">
+                <lightning-input type="text" label="Enter your Name" onchange={changeName}></lightning-input>
+            </div>
+        </div>
+        <br><br>
+        <div class="slds-p-around_xx-small slds-align_absolute-center" style="height:5rem">
+            <c-child-Component-Event></c-child-Component-Event>
+        </div>
+    </lightning-card>
+</template>

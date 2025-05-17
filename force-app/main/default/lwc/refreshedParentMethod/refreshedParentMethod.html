@@ -1,0 +1,27 @@
+<template>
+    <lightning-tabset>
+        <lightning-tab label="PUBLIC METHOD DEMO">
+            <lightning-input type="search" onchange={passInput}>
+            </lightning-input>
+            <div>
+                <h2> CHILD Component screen below</h2>
+                <c-refreshed-child-method></c-refreshed-child-method>
+            </div>
+        </lightning-tab>
+        
+        <lightning-tab label="PUBLIC PROPERTY DEMO">
+            <lightning-input type="search" onchange={passPropertyInput}></lightning-input>
+
+            <div>
+                <h2> Demonstration of Public Properties in LWC Event</h2>
+                <c-refreshed-child-properties received-property={sendToChild}>
+
+                </c-refreshed-child-properties>
+            </div>
+        </lightning-tab>
+            
+    </lightning-tabset>
+    
+    
+    
+</template>

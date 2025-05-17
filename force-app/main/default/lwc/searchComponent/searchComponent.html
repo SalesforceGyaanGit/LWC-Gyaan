@@ -1,0 +1,20 @@
+<template>
+    <H1> LWC SEARCH COMPONENT</H1>
+    <lightning-input
+            name="Search Data"
+            label="Search when user hits the 'enter' key"
+            type="search"
+            onchange={hadleSearchInput}
+        ></lightning-input>
+        <B> The Searched keyword is {searchedKeyword}</B>
+
+
+        <Br/>
+        <H1> ENTER YOUR CREDENTIALS</H1>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter some text" placeholder="type here..." minlength="6" onchange={handleUsername}></lightning-input>
+            <lightning-input type="password" label="Enter your password" name="input1"  onchange={handlePassword}></lightning-input>
+            <lightning-button variant="success" label="SUBMIT" title="Successful action" onclick={handleSubmit}></lightning-button>
+        </div>
+        </div>
+</template>

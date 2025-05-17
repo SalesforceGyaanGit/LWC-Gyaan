@@ -1,0 +1,7 @@
+<apex:page standardController="Leave_Application__c">
+    <apex:pageblock >
+    	<apex:pageBlockSection >
+        	Welcome
+       	</apex:pageBlockSection>
+    </apex:pageblock>
+</apex:page>

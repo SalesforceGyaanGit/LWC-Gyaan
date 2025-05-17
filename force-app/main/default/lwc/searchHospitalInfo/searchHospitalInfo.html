@@ -1,0 +1,55 @@
+<template>
+<h2> Please search hospital here..</h2>
+<div>
+    <lightning-input type="search" label="Search" onchange={handleSearchInput} >
+    </lightning-input>
+</div>
+<div>
+    
+    <!-- Example of wire as a property-->
+    <template if:true={listOfHospitalRecords.data}>
+        <h2> List of hospital has records present</h2>
+        <div>
+            <lightning-button variant="brand-outline" label="Show table" title="Primary action with lighter look" onclick={showTable} class="slds-m-left_x-small"></lightning-button>
+
+            <lightning-button variant="brand-outline" label="Show Data table" title="Primary action with lighter look" onclick={showMyDataTable} class="slds-m-left_x-small"></lightning-button>
+
+        </div>
+
+        <template if:false={showDataTable}>
+            <template if:true={showtable}>
+                <!-- Example of data iteration using For each loop-->
+                <template for:each={listOfHospitalRecords.data} for:item="hsp">
+                    <p key={hsp.Id}>{hsp.Hospital_Name__c}{hsp.City__c}{hsp.Country__c}</p>
+                </template>
+            </template>
+        </template>
+        
+        
+        <template if:false={showtable}>
+            <template if:true={showDataTable}>
+                <!-- Example of data iteration using Lightning Data table-->
+                <lightning-datatable
+                key-field="id"
+                data={listOfHospitalRecords.data}
+                show-row-number-column
+                columns={columns}>
+                </lightning-datatable>
+            </template>
+        </template>
+        
+    </template>
+
+    <template if:false={listOfHospitalRecords.data}>
+        <h2> No data is present</h2>
+    </template>
+    <!-- <template lwc:if={listOfHospotalRecords.data}>
+        <h2> List of hospital has records present</h2>
+    </template>
+    <template lwc:else>
+        <h2> No data is present</h2>
+    </template> -->
+
+    
+</div>
+</template>

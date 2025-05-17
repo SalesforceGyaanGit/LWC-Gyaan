@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <h2>Child component</h2>
+        <lightning-card title="Leave application Module">
+            <template if:true={show}>
+                <div>
+                    <lightning-button variant="brand" label="Cancel" title="Primary action" onclick={applyCancel} class="slds-m-left_x-small slds-text-align_left"></lightning-button>
+                </div>
+                <div class="slds-p-around_medium lgc-bg">
+                    <lightning-formatted-text value={sname}></lightning-formatted-text> <br/>
+                    <lightning-formatted-email value={semail}></lightning-formatted-email>
+                    <lightning-input type="date" label="From Date" onchange={handleFromDate}></lightning-input>
+                    <lightning-input type="date" label="Till Date" onchange={handleTillDate}></lightning-input>
+                    <lightning-input type="text" label="Reason for Leave" onchange={handleReason}></lightning-input>
+                </div>
+                <div>
+                    <lightning-button variant="brand" label="Submit" title="Primary action" onclick={applySubmitLeave} class="slds-m-left_x-small slds-text-align_left"></lightning-button>
+                </div>
+                <div>
+                    Child Component HTML Page, the entered name is {name}
+                </div>
+            </template>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+<apex:page >
+    <div>
+        <p>Enter Your Message Here:</p>
+        <input type="text" id="theMessage" />
+        <button onclick="publishMC()"> Publish Msg</button>
+        <br/><br/>
+            <button onclick="subscribeMC()">Subscribe</button>
+            <button onclick="unsubscribeMC()">Unsubscribe</button>
+        <br/>
+        <br/>
+        <p>Received message:</p>
+        <label id="MCMessageText"/>
+    </div>
+  
+    
+</apex:page>

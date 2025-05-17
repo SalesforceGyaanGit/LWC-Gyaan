@@ -1,0 +1,22 @@
+<template>
+    <div> 
+    <!-- IMPERATIVE WAY OF CALLING CHILD TO PARENT EVENT -->    
+    <!--
+        <lightning-card title="Child Component">
+            <c-refreshed-custom-child-evt oncustevttest={handleChildValue}></c-refreshed-custom-child-evt>
+        </lightning-card>
+        <lightning-card title="Parent component">
+            <h2> We are parent component</h2>
+            Result: {val}
+        </lightning-card>
+    -->
+    <!-- ADD EVENT LISTERNER WAY OF CALLING CHILD TO PARENT EVENT--> 
+    <lightning-card title="Child Component">
+        <c-refreshed-custom-child-evt></c-refreshed-custom-child-evt>
+    </lightning-card>
+    <lightning-card title="Parent component">
+        <h2> We are parent component</h2>
+        Result: {Childval}
+    </lightning-card>   
+    </div>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="Salesforce Gyaan">        
+        <p class="slds-p-horizontal_small">
+            <b>{message}</b>
+        </p>
+    </lightning-card>
+    <lightning-card title="Hospital Name">
+        <template for:each={lstOfHospitalRecords.data} for:item="rec">
+            <p key={rec.Id}>{rec.Hospital_Name__c}</p>  <!-- Wire as a property example : Hospital Data-->
+        </template>
+    </lightning-card> 
+    <br/>
+    <lightning-card title="Hospital Staff Names">
+        <template for:each={staffList} for:item="rec">
+            <p key={rec.Id}>{rec.Staff_Name__c}</p>  <!-- Wire as a property example : Hospital Staff -->
+        </template>
+    </lightning-card>    
+</template>

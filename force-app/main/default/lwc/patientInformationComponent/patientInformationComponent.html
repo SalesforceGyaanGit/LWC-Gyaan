@@ -1,0 +1,20 @@
+<template>
+    <div>
+        <h3> Click on respective buttons to show the patients related details</h3> <br/>
+        <lightning-button label="Patient Name" variant="Brand" title="Primary action" onclick={handlePatientName} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Patient Contacts" variant="Brand" title="Primary action" onclick={handlePatientContact} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    <div>
+        
+        
+        <template if:true={showNames}>
+            <h3> The details are here..</h3>
+            <lightning-datatable 
+                columns={patientNameColumns} 
+                data={patientData} 
+                key-field="id">
+            </lightning-datatable>
+        </template>
+        
+    </div>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <div  class="slds-p-around_xx-small">
+    <div> Patients Details are:</div>
+    <template if:true={patientData}>
+        <!-- <template for:each={lstPatientRecords.data} for:item="patient"> -->
+            <!--<p key={patient.Id}>{patient.Patient_Name__c}</p> -->
+            <lightning-datatable
+                key-field="id"
+                data={patientData}
+                columns={columns}
+                show-row-number-column
+                onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <!-- </template> -->
+    </template>
+    <template if:false={patientData}>
+        <h2> No Data Received, try some other keyword</h2>
+    </template>
+</div>
+    <!-- 
+        <div>
+        =====================================================================
+        <br/>
+        receiveValFromParent === {receiveValFromParent}
+    </div> -->
+</template>

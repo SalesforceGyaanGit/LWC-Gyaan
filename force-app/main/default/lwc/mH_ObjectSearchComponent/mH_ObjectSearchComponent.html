@@ -1,0 +1,123 @@
+<template>
+    <div class="slds-p-around_xx-small">
+        <lightning-card >
+            <div class="slds-p-around_x-small">
+                <lightning-tabset variant="scoped" class="custom-tabset">
+                    <div class="slds-text-heading_small">
+                        <lightning-tab label="Search(c)" class="slds-tabs_default__item">
+                            <h1 class="slds-text-heading_small">Enter your Search here</h1>
+                            <br/>
+                            <lightning-input name="enter-search" label="Search Your Patient Data" type="search" onchange={handleSearchVal}></lightning-input>
+                            <lightning-button variant="Brand" label="Search" title="Search Button" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+                            <br/>
+                            <h2> Search value is : {searchInput}</h2>
+                            <div class="slds-p-around_x-small">
+                                Welcome Mr.: {username}
+                                <br/>
+                                Here is your search Result:
+                            </div>
+                            <div>
+                                <lightning-layout-item flexibility="auto" padding="around-small">
+                                    <c-patient-Details-Comp></c-patient-Details-Comp>
+                                </lightning-layout-item>
+                            </div>
+                        </lightning-tab>
+                    </div>
+                    
+                    <div class="slds-text-heading_small">
+                        <lightning-tab label="Hospital(c)" title="2nd tab extended title" class="slds-tabs_default__item">
+                            Two Content !
+                        </lightning-tab>
+                    </div>
+                    <div class="slds-text-heading_small" >
+                        <lightning-tab label="Patient(c)" class="slds-tabs_default__item">
+                            Three Content !
+                        </lightning-tab>
+                    </div>
+                    <div class="slds-text-heading_small" >
+                        <lightning-tab label="Staff(c)" class="slds-tabs_default__item">
+                            Three Content !
+                        </lightning-tab>
+                    </div>
+                    <div class="slds-text-heading_small" >
+                        <lightning-tab label="LEAVE APPLICATION PORTAL" class="slds-tabs_default__item">
+                            <lightning-button variant="brand" label="Apply Leave" title="Primary action" onclick={applyLeave} class="slds-m-left_x-small slds-text-align_left"></lightning-button>
+                            <template if:true={showPortal}>
+                                <div>
+                                    <c-leave-Application-Portal></c-leave-Application-Portal>
+                                </div>        
+                            </template>
+                            
+                            <template if:false={showPortal}>
+                                <div>
+                                    <H2> To Apply Leaves, Please click on <b>Apply Leave</b> Button</H2>
+                                </div>        
+                            </template>
+                        
+                        </lightning-tab>
+                    </div>
+                </lightning-tabset>
+            </div>     
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div>
+
+                 <!--<template if:true={patientData}>
+                    <template for:each={patientData} for:item="patient">
+                        <p key={patient.Id}>{patient.Patient_Name__c}</p>
+                      </template>
+                 </template>   
+                 <template if:false={patientData}>
+                    <h2> NO Data found Using Wire as a function method</h2>
+                 </template> -->
+                <!--
+                <template if:true={lstPatientRecords.data}>
+                    <template for:each={lstPatientRecords.data} for:item="patient">
+                        <p key={patient.Id}>{patient.Patient_Name__c}</p>
+                      </template>
+                </template>
+                -->
+                <!--
+                <template lwc:if={lstPatientRecords.data}>
+                    <template for:each={lstPatientRecords.data} for:item="patient">
+                      <p key={patient.Id}>{patient.Patient_Name__c}</p>
+                    </template>
+                </template> -->
+                <!--
+                <template if:false={lstPatientRecords.data}>
+                    <h2> NO RESULT FOUND</h2>
+                </template>
+                -->
+                </div>
+                    
+                
+                <!--
+                <div>
+                    <h2> DEMO:  Public Property Example Using Parent to Child Communication</h2>
+                    <lightning-layout-item flexibility="auto" padding="around-small">
+                        <c-patient-Details-Comp receive-val-from-parent = "Prashant">
+
+                        </c-patient-Details-Comp>
+                    </lightning-layout-item>
+                </div>
+            -->
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,66 @@
+<template>
+    <h1> MEDICAL TAB INFORMATION</h1>
+    <div>
+        <lightning-tabset>
+            <lightning-tab label="MEDICAL INFORMATION" title="MEDICAL INFORMATION">
+                <h2> MEDICAL INFO Details and other information</h2>
+                <lightning-tabset>
+                    <lightning-tab label="HOSPITAL INFORMATION" title="HOSPITAL INFORMATION">
+                        <c-hospital-information-component></c-hospital-information-component>
+                    </lightning-tab>
+                    
+                    <lightning-tab label="HOSPITAL STAFF" title="HOSPITAL STAFF">
+                        <c-search-hospital-staff-info></c-search-hospital-staff-info>
+                    </lightning-tab>
+
+                    <lightning-tab label="PATIENT DETAILS" title="PATIENT DETAILS">
+                        <c-patient-information-component></c-patient-information-component>
+                    </lightning-tab>
+                    <lightning-tab label="PAYMENT DETAILS" title="PAYMENT DETAILS"></lightning-tab>
+                </lightning-tabset>
+            </lightning-tab>
+
+            <lightning-tab label="SERVICES" title="SERVICES">
+                <h2> SERVICE INFO Details and other information</h2>
+            </lightning-tab>
+            
+            <lightning-tab label="GENERAL" title="GENERAL">
+                <h2> SHOW ALL THE DONATION GIVEN TO THE HOSPITALS</h2>
+            </lightning-tab>
+
+            <lightning-tab label="Toast notification tab" title="ToastNotify">
+                <c-toast-notification-refreshed></c-toast-notification-refreshed>
+                <br/>
+                <h2> Dynamic Toast notification</h2>
+                <c-toast-notification-component></c-toast-notification-component>
+            </lightning-tab>
+            <lightning-tab label="PARENT-CHILD EVENT" title="pchileEvt">
+                <h2> Public Method</h2>
+                <c-refreshed-parent-method></c-refreshed-parent-method>
+            </lightning-tab>
+            <lightning-tab label="CHILD-PARENT EVENT" title="childchildEvt">
+                <h2> Child-Parent Event</h2>
+                <br/>
+                <!-- <c-refreshed-custom-child-evt></c-refreshed-custom-child-evt> -->
+                <c-refreshed-custom-parent-evt></c-refreshed-custom-parent-evt> 
+            </lightning-tab>
+            <lightning-tab label="Lifecycle Hooks 1">
+                <h2> Lifecycle Hooks</h2>
+                <c-lifecycle-demo-parent></c-lifecycle-demo-parent>
+            </lightning-tab>
+            <lightning-tab label="Lifecycle Hooks 2">
+                <c-lifecycle-tracker></c-lifecycle-tracker>
+            </lightning-tab>
+            <lightning-tab label="PUBSUB Demo">
+                <h2> PUBLISHER COMPONENT</h2>
+                <c-search-component-pubsub></c-search-component-pubsub>
+
+                <h2> SUBSCRIBER COMPONENT</h2>
+                <c-result-component-pubsub></c-result-component-pubsub>                
+            </lightning-tab>
+        </lightning-tabset>
+        <lightning-tabset>
+            
+        </lightning-tabset>
+    </div>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <div  class="slds-p-around_medium slds-align_absolute-center" style="height:1.5rem">
+        Welcome to {CompanyName} <br/>
+        Visit our Website: {Website} <br/>
+        Contact Us : {Newcontact}
+    </div>
+    <br/><br/>
+    <div class="slds-p-around_medium slds-align_absolute-center" style="height:1.5rem">
+        <div>
+            New Contact Number is : {Newcontact}
+        </div>
+        <br/><br/>
+        <div>
+            <lightning-input type="text" label="Enter some text" onchange={changeContact}></lightning-input>
+        </div>
+    </div>
+</template>

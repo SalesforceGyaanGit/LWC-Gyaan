@@ -1,0 +1,18 @@
+<template>
+    <h2> Please search hospital here..</h2>
+        <div>
+            <lightning-input type="search" label="Search" onchange={handleSearchInput} >
+            </lightning-input>
+        </div>
+        <div>
+            <template if:true={staffRecords}>
+                <!-- Example of data iteration using Lightning Data table-->
+                <lightning-datatable
+                key-field="id"
+                data={staffRecords}
+                show-row-number-column
+                columns={columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+</template>

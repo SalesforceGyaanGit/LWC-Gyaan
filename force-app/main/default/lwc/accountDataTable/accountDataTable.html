@@ -1,0 +1,16 @@
+<template>
+<div>
+<h1> Lightning Data Table : Account Object</h1>
+</div>
+    <template if:true={lstAccounts}>
+        <lightning-datatable
+        key-field="Id"
+        data={lstAccounts}
+        columns={columns}        
+        >
+    </lightning-datatable> 
+    <template if:true={error}>
+        <h2> No data found</h2>
+    </template>
+    </template>       
+</template>

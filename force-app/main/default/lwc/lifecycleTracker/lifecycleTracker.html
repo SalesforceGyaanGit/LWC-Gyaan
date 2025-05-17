@@ -1,0 +1,21 @@
+<template>
+    <div style="border: 2px dashed #444; padding: 1rem;">
+        <h2>🔁 Lifecycle Tracker Component</h2>
+
+        <ul>
+            <template for:each={logs} for:item="log">
+                <li key={log}>{log}</li>
+            </template>
+        </ul>
+
+        <button onclick={triggerError}>💣 Simulate Error</button>
+
+        <template if:true={showErrorChild}>
+            <c-error-generator></c-error-generator>
+        </template>
+
+        <template if:true={errorText}>
+            <p style="color: red;"><strong>Error:</strong> {errorText}</p>
+        </template>
+    </div>
+</template>

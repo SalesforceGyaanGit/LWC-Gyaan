@@ -1,0 +1,32 @@
+<template>
+    <lightning-card  title="SALESFORCE GYAAN">
+        <lightning-button label="New" slot="actions"></lightning-button>
+            <p class="slds-p-horizontal_small"> Welcome to Salesforce Gyaan</p>
+            <p slot="footer">Card Footer</p>
+        <DIV>
+            <lightning-tabset variant="scoped">
+                <lightning-tab label="TATA Account">
+                    <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon>  
+                    TATA Contacts
+                        <div style="height: 300px;">
+                            <lightning-datatable
+                                    key-field="id"
+                                    data={data}
+                                    columns={columns}
+                                    onrowaction={handleRowAction}>
+                            </lightning-datatable>
+                        </div>
+                                        
+                </lightning-tab>
+                    
+                <lightning-tab label="HYUNDAI Account">
+                    HYUNDAI Contacts
+                </lightning-tab>
+                <lightning-tab label="KIA Accounts">
+                    KIA Contacts
+                </lightning-tab>
+            </lightning-tabset>
+        </DIV>    
+    </lightning-card>
+    
+</template>

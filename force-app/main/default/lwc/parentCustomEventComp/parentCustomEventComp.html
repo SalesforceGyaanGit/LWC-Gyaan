@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div>            
+             <!-- <c-child-Custom-Event-Component onpassownername={handleMyChildEvent}> HTML Markup-->  
+             <c-child-Custom-Event-Component>  <!-- Javascript using AddEvent Listener method-->   
+             </c-child-Custom-Event-Component>
+        </div>
+        <br/><br/>
+        <div class="slds-p-around_x-small"> 
+            <b> 
+                <i>Parent Component will show value received from Child Component</i>
+                <br/>
+                Value Receieved From Child Component is :  <b>{ShowChildVal}</b>
+            </b>
+             <br/><br/>
+        </div>
+    </lightning-card>
+    
+</template>

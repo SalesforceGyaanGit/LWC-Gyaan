@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-p-around_x-small">
+        <lightning-card class="slds-p-around_x-small">
+            <div class="slds-p-around_x-small slds-text-title_caps slds-text-heading_Large">
+                <p class="slds-box slds-box_small slds-text-font_monospace">
+                    <b>{label.welcomeuserLabel}{currentUserName}</b>
+                </p>                
+            </div>
+            <div>
+                <lightning-combobox class="yourPicklistClass"
+                label="Your label"
+                name="yourPicklistName"
+                options={options}
+                value={value}
+                dropdown-alignment="auto"
+                onchange={handleYourChange}
+                placeholder={yourPlaceholder}></lightning-combobox>
+            </div>
+        </lightning-card>
+    </div>
+</template>

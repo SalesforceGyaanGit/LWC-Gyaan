@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+          <p class="slds-m-bottom_small">
+            <lightning-button label="Load Hospital Records" onclick={handleLoad}></lightning-button>            
+          </p>
+          <p>
+            <lightning-button label="Hide Hospital Records" onclick={hideload}></lightning-button>
+          </p>
+          <template if:true={hospRecs}>
+            <template for:each={hospRecs} for:item="hosp">
+              <p key={hosp.Id}>{hosp.Hospital_Name__c}</p>
+            </template>
+          </template>
+          <template if:true={hideData}>
+            Click <b>Load Hospital Records</b> to see the records
+          </template>
+        </div>
+      </lightning-card>    
+</template>

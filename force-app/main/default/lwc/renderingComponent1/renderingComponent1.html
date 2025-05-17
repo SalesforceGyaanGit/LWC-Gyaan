@@ -1,0 +1,18 @@
+<template>
+    <h1> Welcome to Salesforce Gyaan </h1>
+    <div>
+        <h2>Hello {ownerSName} !</h2>
+    </div>
+    <div>
+        <lightning-input type="checkbox" label="Check Owner" onchange={changeOwner}></lightning-input>
+    </div><br/>
+    <div>
+        <template if:true={flag}>
+            The Website is : {websiteName}
+        </template>
+        <template  if:false={flag}>
+            You are not allowed to see the website
+        </template>
+        
+    </div><br/><br/><div></div>
+</template>
