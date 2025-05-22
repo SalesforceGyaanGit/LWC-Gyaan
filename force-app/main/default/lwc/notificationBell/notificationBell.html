@@ -1,0 +1,10 @@
+<template>
+    <div class="bell-container slds-p-around_small" title={notificationMessage}>
+        <lightning-icon icon-name="utility:notification" alternative-text="Notifications" size="medium">
+        </lightning-icon>
+
+        <template if:true={showBadge}>
+            <span class="badge">{caseCount}</span>
+        </template>
+    </div>
+</template>
